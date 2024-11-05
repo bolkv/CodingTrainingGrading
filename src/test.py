@@ -29,7 +29,7 @@ def unzip_files_in_folder(folder_path, file):
                 for member in zip_ref.namelist():
                     # 폴더 경로와 상관없이 파일 이름만 추출하여 비교
                     base_name = os.path.basename(member)
-                    if base_name == file or base_name == file.replace(".cpp", ".c"):
+                    if base_name == file or base_name == file.replace(".cpp", ".c") in base_name:
                         new_file_name = f"{student_name}_{base_name}"
                         extracted_path = os.path.join(folder_path, new_file_name)
                         
